@@ -1,5 +1,7 @@
-export const semi = true;
-export const trailingComma = 'es6';
-export const singleQuote = true;
-export const printWidth = 80;
-export const tabWidth = 2;
+module.exports = {
+  semi: true,
+  trailingComma: 'es6',
+  singleQuote: true,
+  printWidth: 80,
+  tabWidth: 2
+};

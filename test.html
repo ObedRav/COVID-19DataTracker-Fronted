@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>US States Bar Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div style="width: 80%; margin: auto;">
+    <canvas id="stateBarChart"></canvas>
+  </div>
+
+  <script>
+    async function fetchData() {
+      try {
+        const response = await fetch('https://whispering-forest-10762-67aca61420cd.herokuapp.com/api/daily', {
+          headers: {
+            Authorization: 'L1QC7kcMDKT499aRHzrnXlAWn4prCZMQ'
+          }
+        }); // Replace with the appropriate endpoint
+        const data = await response.json();
+        
+        // Extract data from the fetched response
+        const labels = data.map(entry => entry.date);
+        const totalCasesData = data.map(entry => entry.total_cases);
+        const totalTestingData = data.map(entry => entry.total_testing);
+
+        // Initialize the chart
+        const ctx = document.getElementById('stateBarChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: 'Total Cases',
+                data: totalCasesData,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)', // Customize the color
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 0.1
+              },
+              // Add more datasets for other data points...
+            ]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    fetchData();
+  </script>
+</body>
+</html>

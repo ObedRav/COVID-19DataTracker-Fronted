@@ -19,12 +19,12 @@ const createChart = (scale, canvas, type, labels, datasets, title, providedDelay
     options: {
       animation: {
         delay: (context) => {
-            let delay = 0;
-            if (context.type === 'data') {
-                delay = context.dataIndex * providedDelay + context.datasetIndex * (providedDelay / 3);
-            }
-            return delay;
-        },
+          let delay = 0;
+          if (context.type === 'data') {
+            delay = context.dataIndex * providedDelay + context.datasetIndex * (providedDelay / 3);
+          }
+          return delay;
+        }
       },
       scales: {
         y: {
@@ -51,7 +51,7 @@ const createChart = (scale, canvas, type, labels, datasets, title, providedDelay
             weight: 'bold'
           }
         }
-      },
+      }
     }
   });
 };

@@ -18,11 +18,11 @@ function HorizontalGeneralCard ({ Date, TotalCases, TotalDeaths, TotalTesting, T
 
   return (
     <motion.div
-    className={`mb-4 ${className}`}
-    initial={{ opacity: 0, y: 100 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.4 }}
-    viewport={{ once: true }}
+      className={`mb-4 ${className}`}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      viewport={{ once: true }}
     >
       <Card className='w-full max-w-[48rem] flex-row'>
         <CardHeader

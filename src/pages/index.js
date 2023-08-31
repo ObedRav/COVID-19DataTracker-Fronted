@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from 'react';
 import { createChart } from '@/utils/charts';
 import { useUsData, useTopsUsData, useTopsStatesData } from '@/hooks/useDataFetching';
 import { motion, AnimatePresence } from 'framer-motion';
-import TransitionEffect from '@/components/TransitionEffect';
 import usa1 from '../../public/images/usa1.webp';
 import usa2 from '../../public/images/usa2.jpeg';
 import usa3 from '../../public/images/usa3.webp';
@@ -15,7 +14,7 @@ import state1 from '../../public/images/california1.webp';
 import state2 from '../../public/images/california2.jpeg';
 import state3 from '../../public/images/california3.jpeg';
 
-function TypingAnimation({ text, delay }) {
+function TypingAnimation ({ text, delay }) {
   const characters = text.split('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,7 +41,6 @@ function TypingAnimation({ text, delay }) {
     </div>
   );
 }
-
 
 export default function Home () {
   const router = useRouter();
@@ -100,23 +98,21 @@ export default function Home () {
 
   return (
     <>
-      <TransitionEffect />
-
       <Carousel className='my-4' />
       <Layout>
         {/** Historical Records for the US */}
         <div className='grid w-full grid-cols-8 gap-16 mb-12 mt-12 md:mt-24 lg:mt-36 sm:gap-8'>
           <div className='col-span-4 flex flex-col items-start justify-center xl:col-span-4 sm:order-2 sm:col-span-8'>
-          <div className='text-2xl font-bold mb-6 md:text-4xl lg:text-5xl'>
-            <AnimatePresence mode='wait'>
-              <TypingAnimation text="Historical Records for the United States" delay={20} />
-            </AnimatePresence>
-          </div>
-          <div className='mb-6'>
-            <AnimatePresence mode='wait'>
-              <TypingAnimation text="Explore COVID-19 data for different dates." delay={20} />
-            </AnimatePresence>
-          </div>
+            <div className='text-2xl font-bold mb-6 md:text-4xl lg:text-5xl'>
+              <AnimatePresence mode='wait'>
+                <TypingAnimation text='Historical Records for the United States' delay={20} />
+              </AnimatePresence>
+            </div>
+            <div className='mb-6'>
+              <AnimatePresence mode='wait'>
+                <TypingAnimation text='Explore COVID-19 data for different dates.' delay={20} />
+              </AnimatePresence>
+            </div>
             <Button
               variant='gradient' onClick={() => {
                 router.push({
@@ -157,12 +153,12 @@ export default function Home () {
           <div className='col-span-4 flex flex-col items-start justify-center xl:col-span-4 sm:order-2 sm:col-span-8'>
             <div className='text-2xl font-bold mb-6 md:text-4xl lg:text-5xl'>
               <AnimatePresence mode='wait'>
-                <TypingAnimation text="Historical Records for a Specific State" delay={35} />
+                <TypingAnimation text='Historical Records for a Specific State' delay={35} />
               </AnimatePresence>
             </div>
             <div className='mb-6'>
               <AnimatePresence mode='wait'>
-                <TypingAnimation text="Explore COVID-19 data for different dates." delay={35} />
+                <TypingAnimation text='Explore COVID-19 data for different dates.' delay={35} />
               </AnimatePresence>
             </div>
             <Button

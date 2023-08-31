@@ -5,7 +5,6 @@ import { useStates } from '@/hooks/useDataFetching';
 import { fetchApiData } from '@/utils/api';
 import { createChart1 } from '@/utils/charts';
 import { validateForm } from '@/utils/validations';
-import TransitionEffect from '@/components/TransitionEffect';
 import Layout from '@/components/Layout';
 import HorizontalSpecificCard from '@/components/HorizontalSpecificCard';
 
@@ -25,7 +24,6 @@ const Records = () => {
   const [errors, setErrors] = useState({});
 
   const canvasRef = useRef(null);
-
 
   useEffect(() => {
     if (querySelectedState && querySelectedDate) {
@@ -65,8 +63,6 @@ const Records = () => {
 
   return (
     <>
-      <TransitionEffect />
-
       <Layout>
         {/** Form  */}
         <div className='relative bg-white py-12 px-4 my-8 mx-2 lg:px-36 lg:mx-12 rounded-lg shadow-md'>

@@ -35,7 +35,7 @@ As we continue to develop this frontend, we have exciting plans to further enric
 - **Localization**: Enable multi-language support to cater to a global audience.
 
 - **Performance Optimization**: Continuously optimize the application for performance to ensure swift loading and smooth interactions.
-  
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = process.env.BASE_URL ?? 'https://localhost:5000/api'; // Update with your actual API URL
+const BASE_URL = process.env.BASE_URL ?? 'https://whispering-forest-10762-67aca61420cd.herokuapp.com/api'; // Update with your actual API URL
 const AUTH_TOKEN = process.env.AUTH_TOKEN ?? 'L1QC7kcMDKT499aRHzrnXlAWn4prCZMQ'; // Update with your actual token
 
 /**
